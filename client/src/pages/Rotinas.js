@@ -459,7 +459,7 @@ const Rotinas = () => {
                   veiculos: resultados.veiculos.emissaoCarbonoTotal
                 }
               };
-              fetch('http://ecobalance-backend.onrender.com/api/rotinas', {
+              fetch('https://ecobalance-backend.onrender.com/api/rotinas', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json'

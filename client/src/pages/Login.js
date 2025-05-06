@@ -59,7 +59,7 @@ const Login = () => {
     }
 
     try {
-      const resposta = await fetch("http://ecobalance-backend.onrender.com/api/register", {
+      const resposta = await fetch("https://ecobalance-backend.onrender.com/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nome, email: emailCadastro, senha: senhaCadastro, receberLembretes })
@@ -80,7 +80,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const resposta = await fetch("http://ecobalance-backend.onrender.com/api/login", {
+      const resposta = await fetch("https://ecobalance-backend.onrender.com/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ _id: idLogin, email: emailLogin, senha: senhaLogin }),

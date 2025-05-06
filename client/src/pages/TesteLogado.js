@@ -436,7 +436,7 @@ const TesteLogado = () => {
         emissaoVeiculos: rotinaData.emissoes?.veiculos || 0,
         emissaoTotal
       };
-      const response = await fetch("http://ecobalance-backend.onrender.com/api/testes", {
+      const response = await fetch("https://ecobalance-backend.onrender.com/api/testes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
