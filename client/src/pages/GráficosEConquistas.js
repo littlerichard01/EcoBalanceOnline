@@ -82,7 +82,7 @@ const GraficosEConquistas = () => {
 
         const buscarRotinas = async () => {
             try {
-                const response = await fetch(`http://localhost:3001/api/testes/usuario/${usuario._id}`);
+                const response = await fetch(`http://ecobalance-backend.onrender.com/api/testes/usuario/${usuario._id}`);
                 const data = await response.json();
                 if (Array.isArray(data)) {
                     setTestes(data);
