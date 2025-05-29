@@ -286,8 +286,7 @@ const TesteLogado = () => {
         const carregarRotinas = async () => {
             try {
                 const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
-                const response = await fetch(`http://localhost:3001/api/rotinas/usuario/${usuarioLogado._id}`);
-                // const response = await fetch(`https://ecobalance-backend.onrender.com/api/rotinas/usuario/${usuarioLogado._id}`);
+                const response = await fetch(`https://ecobalance-backend.onrender.com/api/rotinas/usuario/${usuarioLogado._id}`);
                 if (response.ok) {
                     const data = await response.json();
                     setRotinasCadastradas(data);
@@ -665,8 +664,7 @@ const TesteLogado = () => {
                 emissaoVeiculos: rotinaData.emissoes?.veiculos || 0,
                 emissaoTotal
             };
-            const response = await fetch("http://localhost:3001/api/testes", {
-            // const response = await fetch("https://ecobalance-backend.onrender.com/api/testes", {
+            const response = await fetch("https://ecobalance-backend.onrender.com/api/testes", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
