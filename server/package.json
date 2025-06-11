@@ -1,0 +1,36 @@
+{
+  "name": "ecobalance",
+  "version": "1.0.0",
+  "description": "para rodar, em um terminal entre na pasta backend e digite \"npm run dev\" crie outro terminal, entre na pasta frontend e digite \"npm start\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r dotenv/config index.js",
+    "build": "cd client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/littlerichard01/EcoBalance.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/littlerichard01/EcoBalance/issues"
+  },
+  "homepage": "https://github.com/littlerichard01/EcoBalance#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2",
+    "node-cron": "^4.1.0",
+    "nodemailer": "^7.0.3"
+  },
+  "engines": {
+    "node": "20.17.0"
+  }
+}
