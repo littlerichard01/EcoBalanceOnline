@@ -475,7 +475,7 @@ const InfoCadastro = () => {
                         <div className="login-section-alterar-informacoes">
                             <div className="info-parte-1">
                                 <h2 className="login-title">{textos[idiomaSelecionado]?.informacoesUsuario}</h2>
-                                <img src={`/avatars/avatar${usuario.avatarSelecionado}.png`} alt="Avatar do usuário" className="icone-avatar-info-usuario" style={{ width: "50%", objectFit: "cover", borderRadius: "50%" }} />
+                                <img src={`/avatars/avatar${usuario.avatarSelecionado}.png`} alt="Avatar do usuário" className="icone-avatar-info-usuario"/>
                                 <PencilFill
                                     className="icone-editar"
                                     size={20}

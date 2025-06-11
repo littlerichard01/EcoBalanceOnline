@@ -876,9 +876,11 @@ body {
 
 .icone-avatar-info-usuario {
   background-color: rgb(206, 205, 205);
-  border-radius: 100px;
   margin-bottom: 30px;
-
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .subnav-bar {
@@ -2787,11 +2789,6 @@ input:checked+.slider:before {
   .info-parte-2 {
     width: 100%;
     text-align: center;
-  }
-
-  .icone-avatar-info-usuario {
-    width: 80px;
-    height: 80px;
   }
 
   .custom-modal-content {
