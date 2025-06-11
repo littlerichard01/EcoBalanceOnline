@@ -211,8 +211,7 @@ const TesteLogado = () => {
 
         if (usuario._id) {
             try {
-                const response = await fetch(`http://localhost:3001/api/usuarios/${usuario._id}`, {
-                // const response = await fetch(`https://ecobalance-backend.onrender.com/api/usuarios/${usuario._id}`, {
+                const response = await fetch(`https://ecobalance-backend.onrender.com/api/usuarios/${usuario._id}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json",
@@ -314,8 +313,7 @@ const TesteLogado = () => {
         const carregarRotinas = async () => {
             try {
                 const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
-                const response = await fetch(`http://localhost:3001/api/rotinas/usuario/${usuarioLogado._id}`);
-                // const response = await fetch(`https://ecobalance-backend.onrender.com/api/rotinas/usuario/${usuarioLogado._id}`);
+                const response = await fetch(`https://ecobalance-backend.onrender.com/api/rotinas/usuario/${usuarioLogado._id}`);
                 if (response.ok) {
                     const data = await response.json();
                     setRotinasCadastradas(data);
@@ -693,8 +691,7 @@ const TesteLogado = () => {
                 emissaoVeiculos: rotinaData.emissoes?.veiculos || 0,
                 emissaoTotal
             };
-            const response = await fetch("http://localhost:3001/api/testes", {
-                // const response = await fetch("https://ecobalance-backend.onrender.com/api/testes", {
+                const response = await fetch("https://ecobalance-backend.onrender.com/api/testes", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -705,8 +702,7 @@ const TesteLogado = () => {
             let conquistasObtidas = [];
 
             // 1. Verificar "primeiro_teste"
-            const resTestes = await fetch(`http://localhost:3001/api/testes/usuario/${usuarioLogado._id}`);
-            // const resTestes = await fetch(`https://ecobalance-backend.onrender.com/api/testes/usuario/${usuarioLogado._id}`);
+            const resTestes = await fetch(`https://ecobalance-backend.onrender.com/api/testes/usuario/${usuarioLogado._id}`);
             const testesUsuario = await resTestes.json();
 
             if (testesUsuario.length >= 1) {
@@ -750,8 +746,7 @@ const TesteLogado = () => {
 
             // Se houver conquistas, atualizar no backend
             if (conquistasObtidas.length > 0) {
-                await fetch(`http://localhost:3001/api/usuarios/${usuarioLogado._id}/conquistas`, {
-                    // await fetch(`https://ecobalance-backend.onrender.com/api/usuarios/${usuarioLogado._id}/conquistas`, {
+                    await fetch(`https://ecobalance-backend.onrender.com/api/usuarios/${usuarioLogado._id}/conquistas`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',

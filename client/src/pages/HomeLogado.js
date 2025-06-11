@@ -191,8 +191,7 @@ const Home = () => {
 
     if (usuario._id) {
       try {
-        const response = await fetch(`http://localhost:3001/api/usuarios/${usuario._id}`, {
-        // const response = await fetch(`https://ecobalance-backend.onrender.com/api/usuarios/${usuario._id}`, {
+        const response = await fetch(`https://ecobalance-backend.onrender.com/api/usuarios/${usuario._id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",

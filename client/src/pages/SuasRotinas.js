@@ -111,8 +111,7 @@ const SuasRotinas = () => {
     const confirmarRemocaoRotina = async () => {
         if (!rotinaParaDeletar) return;
         try {
-            await fetch(`http://localhost:3001/api/rotinas/${rotinaParaDeletar}`, {
-                // await fetch(`https://ecobalance-backend.onrender.com/api/rotinas/${rotinaParaDeletar}`, {
+                await fetch(`https://ecobalance-backend.onrender.com/api/rotinas/${rotinaParaDeletar}`, {
                 method: 'DELETE',
             });
             toast.success(textos[idiomaSelecionado]?.DeletadaSucesso)
@@ -185,8 +184,7 @@ const SuasRotinas = () => {
 
         if (usuario._id) {
             try {
-                const response = await fetch(`http://localhost:3001/api/usuarios/${usuario._id}`, {
-                // const response = await fetch(`https://ecobalance-backend.onrender.com/api/usuarios/${usuario._id}`, {
+                const response = await fetch(`https://ecobalance-backend.onrender.com/api/usuarios/${usuario._id}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json",
@@ -221,8 +219,7 @@ const SuasRotinas = () => {
 
         const buscarRotinas = async () => {
             try {
-                const response = await fetch(`http://localhost:3001/api/rotinas/usuario/${usuario._id}`);
-                // const response = await fetch(`https://ecobalance-backend.onrender.com/api/rotinas/usuario/${usuario._id}`);
+                const response = await fetch(`https://ecobalance-backend.onrender.com/api/rotinas/usuario/${usuario._id}`);
                 const data = await response.json();
                 if (Array.isArray(data)) {
                     setRotinas(data);

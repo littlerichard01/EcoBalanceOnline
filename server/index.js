@@ -25,8 +25,7 @@ connectDB();
 
 // Middlewares
 app.use(cors({
-  origin: 'http://localhost:3000',
-  // origin: 'http://ecobalance-backend.onrender.com', 
+  origin: 'https://eco-balance-online.vercel.app',
   credentials: true // se você usar cookies/autenticação no futuro
 }));
 app.use(express.json());

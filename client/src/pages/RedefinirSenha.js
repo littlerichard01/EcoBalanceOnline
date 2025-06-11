@@ -62,8 +62,7 @@ const RedefinirSenha = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/recuperar-senha/solicitar', {
-        //  const response = await fetch('https://ecobalance-backend.onrender.com/api/recuperar-senha/solicitar', {
+         const response = await fetch('https://ecobalance-backend.onrender.com/api/recuperar-senha/solicitar', {
 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

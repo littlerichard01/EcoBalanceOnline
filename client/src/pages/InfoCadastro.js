@@ -129,8 +129,7 @@ const InfoCadastro = () => {
             console.log(usuarioAtual);
 
 
-            const response = await axios.put(`http://localhost:3001/api/usuarios/${usuarioAtual._id}`,
-                // const response = await axios.put(`https://localhost:3001/api/usuarios/${usuarioAtual._id}`,
+                const response = await axios.put(`https://ecobalance-backend.onrender.com/api/usuarios/${usuarioAtual._id}`,
                 usuarioAtualizado
             );
 
@@ -240,8 +239,7 @@ const InfoCadastro = () => {
 
         try {
             const response = await axios.put(
-                `http://localhost:3001/api/usuarios/${usuarioAtual._id}`,
-                // `https://ecobalance-backend.onrender.com/api/usuarios/${usuarioAtual._id}`,
+                `https://ecobalance-backend.onrender.com/api/usuarios/${usuarioAtual._id}`,
                 usuarioAtualizado
             );
 
@@ -321,8 +319,7 @@ const InfoCadastro = () => {
 
         if (usuario._id) {
             try {
-                const response = await fetch(`http://localhost:3001/api/usuarios/${usuario._id}`, {
-                // const response = await fetch(`https://ecobalance-backend.onrender.com/api/usuarios/${usuario._id}`, {
+                const response = await fetch(`https://ecobalance-backend.onrender.com/api/usuarios/${usuario._id}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json",

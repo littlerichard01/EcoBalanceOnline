@@ -195,8 +195,7 @@ const Login = () => {
     console.log(conquistas)
 
     try {
-      const resposta = await fetch("http://localhost:3001/api/register", {
-        // const resposta = await fetch("https://ecobalance-backend.onrender.com/api/register", {
+        const resposta = await fetch("https://ecobalance-backend.onrender.com/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nome, email: emailCadastro, senha: senhaCadastro, receberLembretes, conquistas, idioma: idiomaSelecionado })
@@ -228,8 +227,7 @@ const Login = () => {
           console.log('Id do usuário:', rotina.usuarioId)
 
           // Enviar rotina
-          const respostaRotina = await fetch("http://localhost:3001/api/rotinas", {
-            // const respostaRotina = await fetch("https://ecobalance-backend.onrender.com/api/rotinas", {
+            const respostaRotina = await fetch("https://ecobalance-backend.onrender.com/api/rotinas", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(rotina)
@@ -245,8 +243,7 @@ const Login = () => {
             teste.rotina = rotinaId;
 
             // Enviar teste
-            await fetch("http://localhost:3001/api/testes", {
-              // await fetch("https://ecobalance-backend.onrender.com/api/testes", {
+              await fetch("https://ecobalance-backend.onrender.com/api/testes", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(teste)
@@ -273,8 +270,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const resposta = await fetch("http://localhost:3001/api/login", {
-        // const resposta = await fetch("https://ecobalance-backend.onrender.com/api/login", {
+        const resposta = await fetch("https://ecobalance-backend.onrender.com/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ _id: idLogin, email: emailLogin, senha: senhaLogin }),

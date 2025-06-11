@@ -89,8 +89,7 @@ const NovaSenha = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:3001/api/nova-senha/nova', {
-        //  const response = await fetch('https://ecobalance-backend.onrender.com/api/nova-senha/nova', {
+         const response = await fetch('https://ecobalance-backend.onrender.com/api/nova-senha/nova', {
 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
